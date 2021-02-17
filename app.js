@@ -37,9 +37,9 @@ console.log(sumOfTwoValues(4)(2)); */
 
 
 
-let makeCounter = function(){
+let makeCounter = function () {
     let count = 0;
-    return function(){
+    return function () {
         return ++count;
     }
 };
@@ -47,9 +47,10 @@ let makeCounter = function(){
 let firstCounter = makeCounter();
 let secondCounter = makeCounter();
 
-firstCounter();
-firstCounter();
-firstCounter();
-firstCounter();
-console.log(firstCounter());
-console.log(secondCounter());
+firstCounter(); //1
+firstCounter(); //2
+firstCounter();// 3
+firstCounter();// 4
+secondCounter();//1
+console.log(firstCounter()); //5
+console.log(secondCounter()); //2
